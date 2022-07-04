@@ -21,72 +21,79 @@ function convertToWord(letter) {
 }
 
 function win(userChoice, computerChoice) {
+  const smallUserWord = "🧑".fontsize(6).sub();
+  const smallCompWord = "🤖".fontsize(6).sub();
+  const userChoice_div = document.getElementById(userChoice);
+  const computerChoice_div = document.getElementById(computerChoice);
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  const smallUserWord = "(user)".fontsize(3).sub().fontcolor("green");
-  const smallCompWord = "(computer)".fontsize(3).sub().fontcolor("red");
 
   result_p.innerHTML = `
     ${convertToWord(userChoice)}${smallUserWord}
      beats  
     ${convertToWord(computerChoice)}${smallCompWord} 
-    . You win!`;
+    . You win!🐔🍽️`;
 
-  document.getElementById(userChoice).classList.add("green-glow");
-  document.getElementById(computerChoice).classList.add("red-glow");
+  userChoice_div.classList.add("green-glow");
+  computerChoice_div.classList.add("red-glow");
 
   setTimeout(function () {
-    document.getElementById(userChoice).classList.remove("green-glow");
+    userChoice_div.classList.remove("green-glow");
   }, 500);
 
   setTimeout(function () {
-    document.getElementById(computerChoice).classList.remove("red-glow");
+    computerChoice_div.classList.remove("red-glow");
   }, 500);
 }
 
 function lose(userChoice, computerChoice) {
+  const smallUserWord = "🧑".fontsize(6).sub();
+  const smallCompWord = "🤖".fontsize(6).sub();
+  const userChoice_div = document.getElementById(userChoice);
+  const computerChoice_div = document.getElementById(computerChoice);
   computerScore++;
   computerScore_span.innerHTML = computerScore;
   userScore_span.innerHTML = userScore;
-  const smallUserWord = "(user)".fontsize(3).sub().fontcolor("green");
-  const smallCompWord = "(computer)".fontsize(3).sub().fontcolor("red");
   result_p.innerHTML = `
     ${convertToWord(userChoice)}${smallUserWord}
      beats  
     ${convertToWord(computerChoice)}${smallCompWord} 
-    . You Lost!`;
-  document.getElementById(userChoice).classList.add("green-glow");
-  document.getElementById(computerChoice).classList.add("red-glow");
+    . You Lost!😱`;
+  userChoice_div.classList.add("green-glow");
+  computerChoice_div.classList.add("red-glow");
 
   setTimeout(function () {
-    document.getElementById(userChoice).classList.remove("green-glow");
+    userChoice_div.classList.remove("green-glow");
   }, 500);
 
   setTimeout(function () {
-    document.getElementById(computerChoice).classList.remove("red-glow");
+    computerChoice_div.classList.remove("red-glow");
   }, 500);
 }
 
 function draw(userChoice, computerChoice) {
+  const smallUserWord = "🧑".fontsize(6).sub();
+  const smallCompWord = "(🤖)".fontsize(6).sub();
+  const userChoice_div = document.getElementById(userChoice);
+  const computerChoice_div = document.getElementById(computerChoice);
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  const smallUserWord = "(user)".fontsize(3).sub().fontcolor("purple");
-  const smallCompWord = "(computer)".fontsize(3).sub().fontcolor("purple");
+
   result_p.innerHTML = `
     ${convertToWord(userChoice)}${smallUserWord}
      Matches  
     ${convertToWord(computerChoice)}${smallCompWord} 
-    . Its a draw!`;
-  document.getElementById(userChoice).classList.add("purple-glow");
-  document.getElementById(computerChoice).classList.add("purple-glow");
+    . Its a Tie!👔`;
+  userChoice_div.classList.add("green-glow");
+  computerChoice_div.classList.add("red-glow");
 
   setTimeout(function () {
-    document.getElementById(userChoice).classList.remove("purple-glow");
+    userChoice_div.classList.remove("green-glow");
   }, 500);
 
   setTimeout(function () {
-    document.getElementById(computerChoice).classList.remove("purple-glow");
+    computerChoice_div.classList.remove("red-glow");
   }, 500);
 }
 
