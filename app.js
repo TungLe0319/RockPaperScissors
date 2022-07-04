@@ -24,8 +24,9 @@ function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  const smallUserWord = "(user)".fontsize(3).sub();
-  const smallCompWord = "(comp)".fontsize(3).sub();
+  const smallUserWord = "(user)".fontsize(3).sub().fontcolor("green");
+  const smallCompWord = "(computer)".fontsize(3).sub().fontcolor("red");
+
   result_p.innerHTML = `
     ${convertToWord(userChoice)}${smallUserWord}
      beats  
@@ -37,19 +38,19 @@ function win(userChoice, computerChoice) {
 
   setTimeout(function () {
     document.getElementById(userChoice).classList.remove("green-glow");
-  }, 1000);
+  }, 500);
 
   setTimeout(function () {
     document.getElementById(computerChoice).classList.remove("red-glow");
-  }, 1000);
+  }, 500);
 }
 
 function lose(userChoice, computerChoice) {
   computerScore++;
   computerScore_span.innerHTML = computerScore;
   userScore_span.innerHTML = userScore;
-  const smallUserWord = "(user)".fontsize(3).sub();
-  const smallCompWord = "(comp)".fontsize(3).sub();
+  const smallUserWord = "(user)".fontsize(3).sub().fontcolor("green");
+  const smallCompWord = "(computer)".fontsize(3).sub().fontcolor("red");
   result_p.innerHTML = `
     ${convertToWord(userChoice)}${smallUserWord}
      beats  
@@ -60,18 +61,18 @@ function lose(userChoice, computerChoice) {
 
   setTimeout(function () {
     document.getElementById(userChoice).classList.remove("green-glow");
-  }, 1000);
+  }, 500);
 
   setTimeout(function () {
     document.getElementById(computerChoice).classList.remove("red-glow");
-  }, 1000);
+  }, 500);
 }
 
 function draw(userChoice, computerChoice) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  const smallUserWord = "(user)".fontsize(3).sub();
-  const smallCompWord = "(comp)".fontsize(3).sub();
+  const smallUserWord = "(user)".fontsize(3).sub().fontcolor("purple");
+  const smallCompWord = "(computer)".fontsize(3).sub().fontcolor("purple");
   result_p.innerHTML = `
     ${convertToWord(userChoice)}${smallUserWord}
      Matches  
@@ -82,11 +83,11 @@ function draw(userChoice, computerChoice) {
 
   setTimeout(function () {
     document.getElementById(userChoice).classList.remove("purple-glow");
-  }, 1000);
+  }, 500);
 
   setTimeout(function () {
     document.getElementById(computerChoice).classList.remove("purple-glow");
-  }, 1000);
+  }, 500);
 }
 
 function game(userChoice) {
