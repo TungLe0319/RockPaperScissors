@@ -10,6 +10,12 @@
       src="https://kit.fontawesome.com/a2d3ad0e84.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,500&family=Orbitron:wght@500&family=Roboto:ital,wght@1,300&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <header>
     <h1>Rock Paper Scissors</h1>
@@ -18,7 +24,7 @@
     <div class="score-board">
       <div id="user-label" class="badge">user</div>
       <div id="computer-label" class="badge">comp</div>
-      <span id="user-score"> 0 </span> <span id="computer-score"> 0 </span>
+      <span id="user-score"> 0 </span>: <span id="computer-score"> 0 </span>
     </div>
 
     <div class="result">
@@ -27,17 +33,25 @@
 
     <div class="choices">
       <div class="choice" id="r">
-        <img src="rock11.png" alt="ROCK" width="100px" height="100px" />
+        <img
+          id="rock1"
+          src="rock11.png"
+          alt="ROCK"
+          width="150px"
+          height="150px"
+        />
       </div>
+
       <div class="choice" id="p">
-        <img src="pngeggpaper.png" alt="PAPER" width="100px" height="100px" />
+        <img src="pngeggpaper.png" alt="PAPER" width="150px" height="150px" />
       </div>
 
       <div class="choice" id="s">
-        <img src="scissor11.png" alt="SCISSOR" width="100px" height="100px" />
+        <img src="scissor12.png" alt="SCISSOR" width="150px" height="150px" />
       </div>
     </div>
 
+    <p id="action-message">Make your move</p>
     <script src="app.js"></script>
   </body>
 </html>
