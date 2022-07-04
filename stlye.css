@@ -43,13 +43,13 @@ header > h1 {
 #user-label {
   position: absolute;
   top: 30px;
-  left: -30px;
+  left: -55px;
 }
 
 #computer-label {
   position: absolute;
   top: 30px;
-  right: -40px;
+  right: -80px;
 }
 
 .result {
